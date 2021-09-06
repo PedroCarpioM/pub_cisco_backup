@@ -1,0 +1,15 @@
+[cisco]
+demo_cisco
+[switches:children]
+cisco
+#aruba
+#hp
+
+[warnes]
+demo_cisco
+
+[santa_cruz:children]
+warnes
+
+[bolivia:children]
+santa_cruz
