@@ -1,0 +1,23 @@
+---
+- name: Backup all cisco switches in Santa Cruz
+  hosts: cisco:&santa_cruz
+  tasks:
+  - name: Make backup of cisco switches in Santa Cruz
+    import_tasks: tasks/cisco_backup.yml
+    vars:
+      region: santa_cruz
+
+- name: Backup all cisco switches in Warnes
+  hosts: cisco:&warnes
+  tasks:
+  - name: Make backup of cisco switches in Warnes
+    import_tasks: tasks/cisco_backup.yml
+    vars:
+      region: warnes
+
+- hosts: localhost
+  tasks:
+  - name: Done
+    debug:
+      msg: "Finished backup of cisco switches, saved on local backup file"
+
