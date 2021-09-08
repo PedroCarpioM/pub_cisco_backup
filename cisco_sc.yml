@@ -1,8 +1,0 @@
----
-- name: Backup all cisco switches in Santa Cruz
-#  hosts: santa_cruz:&cisco
-  hosts: santa_cruz
-  tasks:
-  - include_tasks: tasks_cisco.yml
-  - debug: msg="The backup has been saved on local backups directory."
-
