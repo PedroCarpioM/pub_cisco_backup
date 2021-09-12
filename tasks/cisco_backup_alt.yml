@@ -1,0 +1,12 @@
+# This tasks file contains the required tasks to backup an cisco switch
+
+---
+- name: Run the SHOW commands and save output 
+  ios_command:
+    commands: "{{ command_list }}"
+  register: showoutput
+
+- name: "Put all the files together into one nice text file"
+  template:
+    src: template.j2 
+    dest: "~/network-programmability/backups/{{region}}/{{ inventory_hostname }}-{{hostvars.localhost.DTG}}-showoutput.txt"
