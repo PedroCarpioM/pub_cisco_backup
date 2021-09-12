@@ -1,0 +1,11 @@
+# This tasks file contains the required tasks to backup an cisco switch
+
+---
+- name: "Get a full backup of the current running-config in {{ region }}"
+  ios_config:
+    backup: yes 
+    backup_options:
+      dir_path: "~/cisco-{{ region }}-backup"
+- name: Done
+  debug:
+    msg: "Saved {{ region }} backup on ~/cisco-{{ region }}-backup/ directory."

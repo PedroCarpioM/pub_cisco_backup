@@ -1,12 +1,17 @@
 [cisco]
-demo_cisco
+cisco_demo ansible_host=192.168.15.5
+
+#[hp]
+#hp\*.example.com
+
 [switches:children]
 cisco
 #aruba
 #hp
 
 [warnes]
-demo_cisco
+cisco_demo ansible_host=192.168.15.5
+#hp[1:5].example.com
 
 [santa_cruz:children]
 warnes
