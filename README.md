@@ -58,6 +58,12 @@ to make a backup of a region is required to append it as a task to the playbook:
         import_tasks: tasks/cisco_backup.yml
         vars:
           region: santa_cruz
-
+## At ansible tower
+- Set organization, users and teams
+- Set credentials to git and vault
+- Set template
+- Set project
+- Set job
+- Set sheduled deploy
 
       # autor: Pedro
