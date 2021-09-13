@@ -1,0 +1,14 @@
+---
+- name: Get current datetime
+  tasks:
+  - name: Get current date time
+    import_tasks: tasks/current_dt.yml
+  run_once: yes
+
+- name: Backup all cisco switches in Santa Cruz
+  hosts: cisco:&santa_cruz
+  tasks:
+  - name: Make backup of cisco switches in Santa Cruz
+    import_tasks: tasks/cisco_backup_alt.yml
+    vars:
+      region: santa_cruz
