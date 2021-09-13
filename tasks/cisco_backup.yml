@@ -8,4 +8,4 @@
       dir_path: "/home/pedro/cisco-{{ region }}-backup"
 - name: Done
   debug:
-    msg: "Saved {{ region }} backup on ~/cisco-{{ region }}-backup/ directory."
+    msg: "Saved {{ region }} backup on /home/pedro/cisco-{{ region }}-backup/ directory."
